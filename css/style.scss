@@ -1,0 +1,97 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dery-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body { 
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    width: 326px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.1);
+
+    &-header {
+        width: 100%;
+        display: block;
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid #66666613;
+
+        &-img {
+            border: 5px solid #fff;
+            border-radius: 50%;
+            margin-top: calc(-48px - 5px);
+            background-color: #fff;
+        }
+
+        &-title {
+            margin-top: 2rem;
+            font-size: 2.5rem;
+
+            span {
+                color: var(--dark-gray);
+                font-weight: 400;
+            }
+        }
+
+        &-text {
+            color: var(--dark-gray);
+            font-size: 2rem;
+            margin-top: 0;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 0.8rem;
+        margin-bottom: 1.2rem;
+
+        &-social {
+            text-align: center;
+            font-size: 1.6rem;
+        }
+
+        &-likes {
+            text-align: center;
+            font-size: 1.6rem;
+        }
+
+        &-photos {
+            text-align: center;
+            font-size: 1.6rem;
+        }
+    }
+
+}
