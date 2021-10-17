@@ -36,12 +36,13 @@ const pintarCard = (pokemon) => {
     const clone = template.cloneNode(true);
     const fragment = document.createDocumentFragment();
 
-    clone.querySelector('.card-body-img').setAttribute('src', pokemon.img);
+    
     clone.querySelector('.card-body-title').innerHTML = `${pokemon.name.toUpperCase()} <span> ${pokemon.hp} </span>`;
     clone.querySelector('.card-body-text').textContent = pokemon.experience + ' Exp';
     clone.querySelector('.card-footer-social h3').textContent = pokemon.ataque + ' K';
     clone.querySelector('.card-footer-likes h3').textContent = pokemon.especial + ' K';
     clone.querySelector('.card-footer-photos h3').textContent = pokemon.defensa + ' K';
+    clone.querySelector('.card-body-img').setAttribute('src', pokemon.img);
 
     fragment.appendChild(clone);
     main.appendChild(fragment);
