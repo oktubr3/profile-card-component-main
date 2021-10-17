@@ -20,9 +20,12 @@ const fetchData = async (id) => {
             ataque: data.stats[1].base_stat,
             especial: data.stats[3].base_stat,
             defensa: data.stats[2].base_stat
-
         }
 
+        if (pokemon.img === null){
+            pokemon.img = '../images/image-victor.jpg'
+        }
+        console.log(data);
         pintarCard(pokemon);
     } catch (error) {
         console.log(error);
